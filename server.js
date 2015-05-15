@@ -35,7 +35,7 @@ app.get('/api/movies/:id', function (req, res) {
             console.log(err);
         }
     });
-    
+
 });
 
 app.listen(3000, function() {

@@ -1,9 +1,13 @@
-app.controller('MoviesCtrl', ['Movies',
-    function(Movies) {
-
+app.controller('MoviesCtrl', ['WebMovies',
+    function( WebMovies) {
         var self = this;
-        this.movies = Movies.movies;
-        this.hello = "Halo";
+        this.movies = null;
+
+        WebMovies.movies().success(function(data) {
+            self.movies = data;
+            //console.log(self.movies);
+        });
+
 
         this.addMovie = function(mv) {
             var newMovie = {

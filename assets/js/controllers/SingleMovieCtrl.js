@@ -1,10 +1,6 @@
-app.controller('SingleMovieCtrl', ['WebMovies', '$routeParams',
-    function(WebMovies, $routeParams) {
-        this.id = $routeParams.movieId;
-        var self = this;
+app.controller('SingleMovieCtrl', ['WebMovies', '$routeParams', 'movie',
+    function(WebMovies, $routeParams, movie) {
 
-        WebMovies.getMovieById(this.id).success(function (data) {
-            self.movie = data;
-            console.log(self.movie);
-        });
+        this.movie = movie;
+
 }]);

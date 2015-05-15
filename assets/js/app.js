@@ -12,8 +12,15 @@ app.config(['$routeProvider', function($routeProvider) {
         .when('/movie/:movieId', {
             templateUrl: 'views/movie.html',
             controller: 'SingleMovieCtrl',
-            controllerAs: 'mv'
-            //resolve: 'SingleMovieCtrl.movie'
+            controllerAs: 'mv',
+            resolve: {
+                movie: function(WebMovies, $route) {
+                    return WebMovies.getMovieById($route.current.params.movieId)
+                        .then(function (response) {
+                            return response.data[0];
+                        })
+                }
+            }
         })
 
         .when('/add', {

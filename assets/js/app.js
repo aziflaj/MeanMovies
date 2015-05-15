@@ -13,6 +13,7 @@ app.config(['$routeProvider', function($routeProvider) {
             templateUrl: 'views/movie.html',
             controller: 'SingleMovieCtrl',
             controllerAs: 'mv'
+            //resolve: 'SingleMovieCtrl.movie'
         })
 
         .when('/add', {

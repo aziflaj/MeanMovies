@@ -7,7 +7,8 @@ app.factory('WebMovies', ['$http',
             movies: function() {
                 return $http.get(apiURL + '/movies');
             },
-            getMovieById: function() {
+
+            getMovieById: function(id) {
                 return $http.get(apiURL + '/movies/'+id);
             }
         };

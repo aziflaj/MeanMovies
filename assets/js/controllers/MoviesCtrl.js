@@ -5,7 +5,6 @@ app.controller('MoviesCtrl', ['WebMovies',
 
         WebMovies.movies().success(function(data) {
             self.movies = data;
-            //console.log(self.movies);
         });
 
 

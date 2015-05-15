@@ -23,7 +23,19 @@ app.get('/api/movies', function (req, res) {
         } else {
             console.log(err);
         }
-    })
+    });
+});
+
+app.get('/api/movies/:id', function (req, res) {
+
+    movies.find({"_id": req.params.id}, function (err, docs) {
+        if (err == null) {
+            res.json(docs);
+        } else {
+            console.log(err);
+        }
+    });
+    
 });
 
 app.listen(3000, function() {

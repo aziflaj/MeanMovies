@@ -1,0 +1,12 @@
+html, body {
+    margin-left: 2em;
+    margin-right: 2em;
+}
+
+nav {
+    margin-bottom: 2em;
+}
+
+.movie-card {
+    margin: 0 2em 1em;
+}

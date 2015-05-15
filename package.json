@@ -1,0 +1,14 @@
+{
+  "name": "ExpressTest",
+  "version": "0.1.0",
+  "description": "Playing with MEAN stack",
+  "main": "server.js",
+  "scripts": {
+    "start": "node ./server"
+  },
+  "author": "Aldo Ziflaj",
+  "license": "none",
+  "dependencies": {
+    "express": "~4.12.3"
+  }
+}

@@ -1,0 +1,30 @@
+<div class="row">
+    <form action="#" class="col s12" ng-submit="mv.addMovie(nuovo)">
+        <div class="row input-field">
+            <input id="title" type="text" class="validate"
+                   ng-model="nuovo.title">
+            <label for="title">Title</label>
+        </div>
+
+        <div class="row input-field">
+            <textarea id="descr" class="materialize-textarea"
+                      ng-model="nuovo.descr">
+            </textarea>
+            <label for="descr">Description</label>
+        </div>
+
+        <div class="file-field input-field">
+            <input class="file-path validate" type="text"/>
+            <div class="btn">
+                <span>File</span>
+                <input type="file" />
+            </div>
+        </div>
+
+        <button class="btn waves-effect waves-light" type="submit">
+            Submit
+            <i class="mdi-content-send right"></i>
+        </button>
+
+    </form>
+</div>

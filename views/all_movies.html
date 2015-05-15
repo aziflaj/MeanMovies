@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col s12 m3 movie-card" ng-repeat="movie in mv.movies">
+
+        <movie title="{{movie.title}}"
+               img="{{movie.poster}}"
+               descr="{{movie.descr | words: 15}}"
+               movie-id="{{movie.id}}">
+        </movie>
+
+    </div>
+</div>

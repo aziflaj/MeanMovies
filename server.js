@@ -1,6 +1,14 @@
 var express = require('express'),
     app = express(),
-    path = require('path');
+    path = require('path'),
+
+    //database dependencies
+    mongodb = require('mongodb'),
+    monk = require('monk');
+
+
+var db = monk('localhost:27017/test');
+var people = db.get('people');
 
 app.use('/', express.static(__dirname + '/'));
 
@@ -17,6 +25,18 @@ app.get('/api/test', function(req, res) {
             message: 'Working!'
         }
     })
+});
+
+app.get('/api/people', function (req, res) {
+    people.find({}, function (err, docs){
+        if (err == null) {
+            var result = docs;
+            res.json(result);
+
+        } else {
+            console.log("erros!");
+        }
+    });
 });
 
 app.listen(3000, function() {

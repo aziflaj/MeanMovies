@@ -9,6 +9,8 @@
   "author": "Aldo Ziflaj",
   "license": "none",
   "dependencies": {
-    "express": "~4.12.3"
+    "express": "~4.12.3",
+    "mongodb": "~2.0.31",
+    "monk": "~1.0.1"
   }
 }
